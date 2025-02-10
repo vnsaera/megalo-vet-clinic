@@ -48,7 +48,7 @@ h3 {
 .outline {
     font-size: 3.75rem;
     color: #912933; 
-    -webkit-text-stroke: 0.1px white;
+    -webkit-text-stroke: 1px white;
 }
 
 
