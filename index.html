@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Megalo Empire Animal Clinic</title>
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <img src="assets/img/icon/ev-logo.png" width="48px" width="48px">
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="pages/about.html" aria-label="About Us">About</a>
+            <a href="pages/services.html" aria-label="Services">Services</a>
+            <a href="pages/blog.html" aria-label="Blog">Blog</a>
+            <a href="pages/gallery.html" aria-label="Gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Landing Section -->
+        <section id="landing-section" class="content red">
+            <div class="landing-container">
+                <h1>Megalo Empire</h1>
+                <h1 class="outline">Animal Clinic</h1>
+                <h3>Weekend vet, because fur-ever matters</h3>
+                <h3>Book an appointment with us now!</h3>
+                <div class="appointment-form">
+                    <label for="pet">Fill this form: </label>
+                    
+                    <select id="pet">
+                        <option value="" disabled selected>Select an Animal</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="rabbit">Rabbit</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="bird">Bird</option>
+                        <option value="fish">Fish</option>
+                        <option value="turtle">Turtle</option>
+                        <option value="reptile">Reptile</option>
+                        <option value="others">Others</option>
+                    </select>
+
+                    <select id="service">
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="vaccination">Vaccination</option>
+                        <option value="deworming">Deworming</option>
+                        <option value="spaying_neutering">Spaying/Neutering</option>
+                        <option value="surgery">Surgery</option>
+                        <option value="microchipping">Microchipping</option>
+                        <option value="ultrasound">Ultrasound</option>
+                        <option value="emergency">Emergency Treatment</option>
+                        <option value="nutrition">Nutritional Consultation</option>
+                        <option value="general_checkup">General Health Checkup</option>
+                        <option value="others">Others</option>
+                    </select>
+
+                    <select id="date">
+                        <option value="" disabled selected>Select a Date</option>
+                        <option value="2025-02-12">12 Feb 2025</option>
+                        <option value="2025-02-13">13 Feb 2025</option>
+                        <option value="2025-02-14">14 Feb 2025</option>
+                    </select>
+
+                    <button type="submit" id="submit-btn">Submit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-section" class="content peach">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="" alt="Consultation">
+                    <h3>Consultation</h3>
+                </div>
+                <div class="service-item">
+                    <img src="" alt="Vaccination">
+                    <h3>Vaccination</h3>
+                </div>
+                <div class="service-item">
+                    <img src="" alt="Surgery">
+                    <h3>Surgery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="" alt="Ultrasound">
+                    <h3>Ultrasound</h3>
+                </div>
+                <div class="service-item">
+                    <img src="" alt="Emergency Treatment">
+                    <h3>Emergency Treatment</h3>
+                </div>
+            </div>
+            <a href="pages/services.html" class="btn">Learn More</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="content white">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="" alt="Clinic Outside">
+                </div>
+                <div class="about-text">
+                    <h2>A veterinary clinic in the heart of Bintulu town</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie sapien dui, at finibus ligula convallis sit amet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section -->
+        <section id="updates-section" class="content peach">
+            <h2>Latest Updates</h2>
+            <div class="updates-container">
+                <div class="update-item">
+                    <img src="">
+                    <h3>Update Title</h3>
+                    <p>Update details...</p>
+                </div>
+                <div class="update-item">
+                    <img src="">
+                    <h3>Update Title</h3>
+                    <p>Update details...</p>
+                </div>
+                <div class="update-item">
+                    <img src="">
+                    <h3>Update Title</h3>
+                    <p>Update details...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials-section" class="content white">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-item">
+                    <img src="">
+                    <h3>Client Name</h3>
+                    <p>Feedback...</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="">
+                    <h3>Client Name</h3>
+                    <p>Feedback...</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="">
+                    <h3>Client Name</h3>
+                    <p>Feedback...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section id="google-map" class="content">
+            <h2>Find Us</h2>
+            <p>Our clinic is located at...</p>
+            <div id="map-container">
+                <p>[Google Map Embed Placeholder]</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq-section" class="content peach">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <p>[FAQ content will be added]</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer"> 
+        <div id="footer-logo">
+            <h2>Megalo Empire</h2>
+            <h2 class="outline">Animal Clinic</h2>
+            <h3>Weekend vet, because fur-ever matters</h3>
+
+        </div>
+        <div class="footer-info">
+            <p>Address: Lot 8641, Ground Floor, Emart Commercial Centre, Jalan Rakawi Yusuf, 97000 Bintulu, Sarawak</p>
+            <p>Hours: Closed ⋅ Opens 9:30 am Tue</p>
+            <p>Phone: 017-380 7339</p>
+    
+            <div class="social-media">
+                <p>Follow us on social media</p>
+                <div class="icons">
+                    <img src="assets/img/icon/facebookw.png" alt="Facebook">
+                    <img src="assets/img/icon/instagramw.png" alt="Instagram">
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+            
