@@ -24,13 +24,17 @@ body {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Magules', sans-serif;
     font-size: 4rem;
 }
 
 h2 {
-    font-family: 'Magules', sans-serif;
+    font-family: 'PerfectlyVintage', sans-serif;
     font-size: 3rem;
 }
 
@@ -55,6 +59,13 @@ h3 {
 @font-face {
     font-family: 'Magules';
     src: url('../font/Magules.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PerfectlyVintage';
+    src: url('../font/PerfectlyVintage.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
