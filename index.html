@@ -9,14 +9,6 @@
 </head>
 <body>
     <header id="main-header">
-        <nav>
-            <img src="assets/img/icon/ev-logo.png" width="48px" width="48px">
-            <a href="index.html" aria-label="Home">Home</a>
-            <a href="pages/about.html" aria-label="About Us">About</a>
-            <a href="pages/services.html" aria-label="Services">Services</a>
-            <a href="pages/blog.html" aria-label="Blog">Blog</a>
-            <a href="pages/gallery.html" aria-label="Gallery">Gallery</a>
-        </nav>
     </header>
 
     <main>
@@ -75,27 +67,26 @@
             <h2>Our Services</h2>
             <div class="services-container">
                 <div class="service-item">
-                    <img src="" alt="Consultation">
+                    <img src="assets/img/cat.jpg" alt="Consultation" onclick="window.location.href='projects.html'">
                     <h3>Consultation</h3>
                 </div>
                 <div class="service-item">
-                    <img src="" alt="Vaccination">
+                    <img src="assets/img/cat.jpg" alt="Vaccination" onclick="window.location.href='projects.html'">
                     <h3>Vaccination</h3>
                 </div>
                 <div class="service-item">
-                    <img src="" alt="Surgery">
+                    <img src="assets/img/cat.jpg" alt="Surgery" onclick="window.location.href='projects.html'">
                     <h3>Surgery</h3>
                 </div>
                 <div class="service-item">
-                    <img src="" alt="Ultrasound">
+                    <img src="assets/img/cat.jpg" alt="Ultrasound" onclick="window.location.href='projects.html'">
                     <h3>Ultrasound</h3>
                 </div>
                 <div class="service-item">
-                    <img src="" alt="Emergency Treatment">
+                    <img src="assets/img/cat.jpg" alt="Emergency Treatment" onclick="window.location.href='projects.html'">
                     <h3>Emergency Treatment</h3>
                 </div>
             </div>
-            <a href="pages/services.html" class="btn">Learn More</a>
         </section>
 
         <!-- About Section -->
@@ -174,29 +165,26 @@
     </main>
 
     <!-- Footer -->
-    <footer id="main-footer"> 
+    <footer id="main-footer-home"> 
         <div id="footer-logo">
-            <h2>Megalo Empire</h2>
-            <h2 class="outline">Animal Clinic</h2>
+            <h1>Megalo Empire</h1>
+            <h1 class="outline">Animal Clinic</h1>
             <h3>Weekend vet, because fur-ever matters</h3>
-
         </div>
         <div class="footer-info">
-            <p>Address: Lot 8641, Ground Floor, Emart Commercial Centre, Jalan Rakawi Yusuf, 97000 Bintulu, Sarawak</p>
-            <p>Hours: Closed ⋅ Opens 9:30 am Tue</p>
-            <p>Phone: 017-380 7339</p>
-    
-            <div class="social-media">
-                <p>Follow us on social media</p>
-                <div class="icons">
-                    <img src="assets/img/icon/facebookw.png" alt="Facebook">
-                    <img src="assets/img/icon/instagramw.png" alt="Instagram">
-                </div>
+            <p>Follow us on social media</p>
+            <div class="icons">
+                <img src="assets/img/icon/facebookw.png" alt="Facebook" onclick="window.open('https://www.facebook.com/MegaloEmpire/', '_blank')">
+                    <img src="assets/img/icon/instagramw.png" alt="Instagram" onclick="window.open('https://www.instagram.com/empiremegalo/')">
             </div>
+            <p><strong>Address:</strong> Lot 8641, Ground Floor, Emart Commercial Centre, Jalan Rakawi Yusuf, 97000 Bintulu, Sarawak</p>
+            <div class="hours">
+                <p><strong>Open:</strong> Mon-Wed, Sat-Sun (9:30 AM–1 PM, 2–5:30 PM) | Closed Thu-Fri</p>
+            </div>
+            <p><strong>Phone:</strong> 017-380 7339</p>
         </div>
-        <br>
-        <p>&copy; 2025 All rights reserved.</p>
     </footer>
+    <p id="cpr">&copy; 2025 All rights reserved.</p>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

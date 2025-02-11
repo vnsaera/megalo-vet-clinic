@@ -25,11 +25,35 @@ body {
 }
 
 a {
+    position: relative;
     text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block;
+    width: fit-content;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover {
+    transform: translateY(-3px);
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 h1 {
-    font-family: 'Magules', sans-serif;
+    font-family: 'PerfectlyVintage', sans-serif;
     font-size: 4rem;
 }
 
@@ -41,12 +65,11 @@ h2 {
 h3 {
     font-family: 'InstrumentSans', sans-serif;
     font-size: 1.75rem;
-    color: #fbb233;
+    color: #eda325;
 }
 
-h3 {
-    font-family: 'InstrumentSans', sans-serif;
-    font-size: 1.5rem;
+p, a {
+    font-size: 1.25rem;
 }
 
 .outline {
@@ -54,7 +77,6 @@ h3 {
     color: #912933; 
     -webkit-text-stroke: 1px white;
 }
-
 
 @font-face {
     font-family: 'Magules';
@@ -118,6 +140,11 @@ header {
     width: 90%;
     z-index: 1000;
     padding-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    transform: translateY(-100%);
 }
 
 nav {
@@ -147,42 +174,66 @@ nav img {
     align-items: flex-start;
     background-color: #912933;
     color: white;
-    padding: 20px;
+    padding: 5px 10px;
     flex-wrap: wrap;
     width: 100vw;
     max-width: 100%;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+}
+
+#main-footer-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #912933;
+    color: white;
+    padding: 5px 10px;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    font-size: 0.7rem;
 }
 
 #footer-logo {
-    flex: 1;
+    flex: 2;
     text-align: left;
 }
 
 .footer-info {
-    max-width: 500px; /* Adjust width as needed */
-    margin: 0 auto; /* Center align */
-    text-align: center; /* Center text */
-    word-wrap: break-word; /* Ensure wrapping */
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex: 1;
     text-align: right;
-    flex:wrap;
-    gap: 10px;
+    font-size: 0.7rem;
+    line-height: 1.3;
 }
 
-.social-media {
+.footer-info p {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+}
+
+.icons {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 5px;
 }
 
 .icons img {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
+    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icons img:hover {
+    filter: brightness(80%);
+    transform: translateY(-1px);
+}
+
+#cpr {
+    padding: 3px;
+    font-size: 0.7rem;
 }
 
 @media (max-width: 768px) {
@@ -191,20 +242,20 @@ nav img {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     h3 {
         font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1.25rem;
-    }
+    p, a {
+        font-size: 1.1rem;
+    }    
     
     .outline {
         font-size: 2.25rem;
@@ -245,18 +296,18 @@ nav img {
     }
 
     h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
-    h3 {
+    p, a {
         font-size: 1rem;
     }
 
@@ -276,28 +327,33 @@ nav img {
 
     nav a {
         font-size: 0.8rem;
-        padding: 5px 5px;
+        padding: 5px 3px;
     }
 
     .content {
         padding: 20px 0;
     }
 
+
     #main-footer {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 5px;
     }
 
     .footer-info {
-        margin: 15px 0 0 0;
-        max-width: 80%;
-        font-size: 0.75rem;
+        max-width: 100%;
+        font-size: 0.65rem;
+        line-height: 1;
+    }
+
+    .footer-info p {
+        margin-bottom: 3px;
     }
 
     .icons img {
-        width: 20px;
-        height: 20px;
+        width: 18px; 
     }
 }
-

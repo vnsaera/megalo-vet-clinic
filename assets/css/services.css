@@ -1,0 +1,26 @@
+/* 
+Hey, just a heads-up(REMINDER ON WHATS IN GLOBAL.CSS! 
+- Titles mostly use `h2` ).
+-Subheading pakai 'h3' (oh, and it's yellow-colored: `#eda325`)
+- Bigger titles? Use `h1` or `h2`.
+- For regular text, just stick to `p`.
+- Links (`<a>`) have hover effects with a little animation.
+- Most of the alignment is handled using `flexbox`, so belajar elok2 that thing
+- Section background colors(e.g class=content red)? Use `.red`, `.peach`, and `.white` classes.
+- **IMPORTANT:** Jangan kacau global.css styles. Apa-apa, message Yum dulu takut kacau code orang lain.
+- **Stick to your assigned page!** Jangan edit page lain, nanti merge conflicts/clash (basically kena 
+    check code satu2 mana yg clash astu kena delete mana yang tanak). 
+*/
+
+#landing-section {
+    width: 100vw;
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left; 
+    padding: 50px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+}
+
