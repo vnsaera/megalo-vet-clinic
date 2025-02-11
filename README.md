@@ -19,4 +19,4 @@ Megalo Clinic is a veterinary clinic website designed to provide **live updates,
 ## 🚀 How to Run Locally  
 1. Clone the repository:  
    ```sh
-   git clone [https://github.com/yourusername/megalo-clinic.git](https://github.com/Qaiyyum47/megalo-vet-clinic.git) 
+   git clone https://github.com/Qaiyyum47/megalo-vet-clinic.git
