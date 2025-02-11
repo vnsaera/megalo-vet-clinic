@@ -4,7 +4,7 @@
 }
 
 .appointment-form {
-    position: relative; /* Ensures absolute positioning works inside */
+    position: relative; 
     margin: 40px auto 0; 
     border-radius: 10px;
     display: flex;
@@ -33,8 +33,8 @@
     right: 10px;
     color: #751e28;
     opacity: 0;
-    width: 30px; /* Fixed width */
-    height: 30px; /* Fixed height */
+    width: 30px; 
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,13 +43,10 @@
 }
 
 #close-form-btn:hover {
-    background: #d58c1f; /* Darken on hover */
-    transform: scale(1.1); /* Slightly increase size */
+    background: #d58c1f;
+    transform: scale(1.1); 
 }
 
-
-
-/* Show the close button when form expands */
 .appointment-form.expanded #close-form-btn {
     opacity: 1;
 }
@@ -70,7 +67,6 @@
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 
-/* When form is expanded, show it */
 #full-form.show {
     opacity: 1;
     max-height: 500px;
@@ -109,7 +105,6 @@ button:hover {
     background-color: #751e28;
 }
 
-/* General services container styling */
 .services-container {
     display: flex;
     justify-content: center;
@@ -120,7 +115,6 @@ button:hover {
     text-align: center;
 }
 
-/* Individual service item styling */
 .service-item {
     display: flex;
     flex-direction: column;
@@ -130,7 +124,6 @@ button:hover {
     padding: 10px;
 }
 
-/* Service item image styling */
 .service-item img {
     width: 200px;
     height: 200px;
@@ -140,15 +133,11 @@ button:hover {
     transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* Hover effect for service images */
 .service-item img:hover {
     filter: brightness(80%);
     transform: translateY(-10px);
 }
 
-
-
-/* Container for each project */
 .about-container {
     display: flex;
     align-items: center;
@@ -160,7 +149,6 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* Image section */
 .about-image {
     flex: 1;
     display: flex;
@@ -179,7 +167,6 @@ button:hover {
 }
 
 .about-image img:hover {
-    /*filter: brightness(80%);*/
     transform: translateY(-10px);
 }
 
@@ -215,11 +202,9 @@ button:hover {
 }
 
 .update-item:hover {
-    /*filter: brightness(80%);*/
     transform: translateY(-10px);
 }
 
-/* Profile Section */
 .update-header {
     display: flex;
     align-items: center;
@@ -249,7 +234,7 @@ button:hover {
     color: #777;
 }
 
-/* Post Image */
+
 .update-img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -293,7 +278,7 @@ button:hover {
 
 .map-bg {
     width: 90vw;
-    height: 50vh; /* Adjust as needed */
+    height: 50vh;
     position: relative;
 }
 
@@ -327,7 +312,6 @@ button:hover {
     text-align: left;
 }
 
-/* Profile Section */
 .testimonial-header {
     display: flex;
     align-items: center;
@@ -347,7 +331,6 @@ button:hover {
     font-size: 14px;
 }
 
-/* Testimonial Content */
 .testimonial-content {
     font-size: 14px;
     line-height: 1.4;
@@ -374,7 +357,7 @@ button:hover {
 
 .faq-question {
     width: 100%;
-    background: #912933; /* Red background */
+    background: #912933; 
     color: white;
     border: none;
     text-align: left;
@@ -404,13 +387,12 @@ button:hover {
     border-radius: 0 0 5px 5px;
 }
 
-/* When active, show the answer with full height */
 .faq-item.active {
     flex-grow: 1;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 150px; /* Adjust height based on content */
+    max-height: 150px; 
     opacity: 1;
     padding: 10px 15px;
 }
@@ -419,23 +401,22 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-/* Rotate arrow when expanded */
 .faq-item.active .arrow {
     transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
     .appointment-form {
-        width: 80vw; /* Make the form wider for better usability */
+        width: 80vw; 
         padding: 8px;
     }
     
     .appointment-form.expanded {
-        width: 90vw; /* Expanded form takes more space */
+        width: 90vw;
     }
 
     .form-fl, .form-sl {
-        flex-direction: column; /* Stack form elements vertically */
+        flex-direction: column; 
     }
 
     #toggle-form-btn {
@@ -459,7 +440,6 @@ button:hover {
         height: 175px;
     }
 
-    /* Ensure form expands correctly on small screens */
     #full-form {
         max-height: 0;
         opacity: 0;
@@ -468,14 +448,12 @@ button:hover {
     }
 
     .appointment-form.expanded #full-form {
-        max-height: 1000px; /* Large enough to fit content */
+        max-height: 1000px; 
         opacity: 1;
     }
 }
 
-/* Mobile-specific styles */
 @media (max-width: 480px) {
-    /* Appointment form adjustments for mobile */
     .appointment-form {
         width: 95vw;
         padding: 5px;
@@ -502,13 +480,11 @@ button:hover {
         padding: 5px;
     }
 
-    /* Adjust the size of service images on mobile */
     .service-item img {
         width: 150px;
         height: 150px;
     }
 
-    /* Text and container adjustments for mobile */
     .about-text {
         max-width: 80%;
     }
@@ -522,7 +498,6 @@ button:hover {
         width: 80%;
     }
 
-    /* Style for the toggle button in mobile */
     #toggle-form-btn {
         font-size: 1rem;
         background-color: #fcecdf;
@@ -530,8 +505,7 @@ button:hover {
         width: 50vw;
     }
 
-    /* Ensure the form expands properly on mobile */
     .appointment-form.expanded #full-form {
-        max-height: 1400px;  /* Increased max-height for mobile */
+        max-height: 1400px;  
     }
 }

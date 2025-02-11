@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullForm.classList.add("show");
         appointmentForm.classList.add("expanded");
         closeBtn.style.display = "block";
-        toggleFormBtn.style.display = "none"; // Hide button when clicked
+        toggleFormBtn.style.display = "none";
     });
 
     closeBtn.addEventListener("click", function () {
@@ -97,9 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         nameInput.classList.remove("show");
         appointmentForm.classList.remove("expanded");
         closeBtn.style.display = "none";
-        toggleFormBtn.style.display = "block"; // Show button again when closed
+        toggleFormBtn.style.display = "block"; 
 
-        // Clear input fields
         document.querySelectorAll("#full-form input, #full-form select").forEach(input => {
             input.value = "";
         });
@@ -111,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     flatpickr("#datepicker", {
         dateFormat: "d-m-Y",
         minDate: "today",
-        maxDate: new Date().fp_incr(365) // Allows dates up to 1 year from today
+        maxDate: new Date().fp_incr(365)
     });
 });
 
@@ -122,10 +121,10 @@ document.getElementById("timepicker").addEventListener("input", function () {
     let warning = document.getElementById("time-warning");
 
     if (time < minTime || time > maxTime) {
-        warning.style.display = "block";  // Show warning message
-        this.value = ""; // Clear invalid input
+        warning.style.display = "block";  
+        this.value = ""; 
     } else {
-        warning.style.display = "none";  // Hide warning message
+        warning.style.display = "none";  
     }
 });
 
@@ -136,39 +135,33 @@ document.addEventListener("DOMContentLoaded", function () {
         const question = item.querySelector(".faq-question");
 
         question.addEventListener("click", function () {
-            // Close all other answers before opening this one
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove("active");
                 }
             });
 
-            // Toggle current question
             item.classList.toggle("active");
         });
     });
 });
 
 function sendMessage() {
-    // Get the input values
     const name = document.getElementById('name').value;
     const pet = document.getElementById('pet').value;
     const service = document.getElementById('service').value;
     const date = document.getElementById('datepicker').value;
     const time = document.getElementById('timepicker').value;
 
-    // Get the current time to validate against the available time
     const currentTime = new Date(`1970-01-01T${time}:00`);
     const startTime = new Date('1970-01-01T09:30:00');
     const endTime = new Date('1970-01-01T17:30:00');
 
-    // Show warning if time is outside of the available range
     if (currentTime < startTime || currentTime > endTime) {
         document.getElementById('time-warning').style.display = 'block';
-        return; // Stop the function if time is invalid
+        return; 
     }
 
-    // Prepare the message for WhatsApp with a more readable format
     const message = `
     *Appointment Request*:
     - *Name*: ${name}
@@ -178,13 +171,10 @@ function sendMessage() {
     - *Time*: ${time}
     `;
 
-    // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
 
-    // WhatsApp URL format with your number (replace '1234567890' with your WhatsApp number)
     const whatsappLink = `https://wa.me/601160814971?text=${encodedMessage}`;
 
-    // Open WhatsApp with the message
     window.open(whatsappLink, '_blank');
 
 }
