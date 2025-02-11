@@ -54,12 +54,13 @@ a:hover::after {
 
 h1 {
     font-family: 'PerfectlyVintage', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
     font-family: 'PerfectlyVintage', sans-serif;
     font-size: 3rem;
+    color: #912933;
 }
 
 h3 {
@@ -70,6 +71,15 @@ h3 {
 
 p, a {
     font-size: 1.25rem;
+}
+
+input, textarea, select {
+    font-family: 'InstrumentSans', sans-serif;
+}
+
+select {
+    font-family: 'InstrumentSans', sans-serif;
+
 }
 
 .outline {
@@ -182,20 +192,6 @@ nav img {
     font-size: 0.7rem;
 }
 
-#main-footer-home {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #912933;
-    color: white;
-    padding: 5px 10px;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    font-size: 0.7rem;
-}
-
 #footer-logo {
     flex: 2;
     text-align: left;
@@ -236,13 +232,30 @@ nav img {
     font-size: 0.7rem;
 }
 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-btn img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-btn img:hover {
+    transform: scale(1.1);
+}
+
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     h2 {
@@ -296,7 +309,7 @@ nav img {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
@@ -355,5 +368,10 @@ nav img {
 
     .icons img {
         width: 18px; 
+    }
+
+    .whatsapp-btn img {
+        width: 48px;
+        width: 48px;
     }
 }

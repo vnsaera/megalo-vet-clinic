@@ -1,7 +1,115 @@
-.appointment-form {
-
+#landing-section {
+    padding-top: 14%;
+    padding-bottom: 5%;
 }
 
+.appointment-form {
+    position: relative; /* Ensures absolute positioning works inside */
+    margin: 40px auto 0; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    transition: width 0.3s ease-in-out;
+}
+
+#toggle-form-btn {
+    margin-top: 5%;
+    font-family: 'InstrumentSans', Arial, Helvetica, sans-serif;
+    line-height: 1;
+    font-size: 1.25rem;
+    background-color: #fcecdf;
+    color: #912933;
+    width: 15vw;
+}
+
+#close-form-btn {
+    background: #eda325;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #751e28;
+    opacity: 0;
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#close-form-btn:hover {
+    background: #d58c1f; /* Darken on hover */
+    transform: scale(1.1); /* Slightly increase size */
+}
+
+
+
+/* Show the close button when form expands */
+.appointment-form.expanded #close-form-btn {
+    opacity: 1;
+}
+
+
+.appointment-form.expanded {
+    width: 60vw; 
+    padding: 12px 30px;
+    gap: 6px;
+    background-color: #fcecdf;
+    border: 2px solid #fcecdf;
+}
+
+#full-form {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* When form is expanded, show it */
+#full-form.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+.appointment-form p, label {
+    color: #912933;
+}
+
+.form-fl {
+    margin-bottom: 5px;
+}
+
+.form-fl, .form-sl {
+    display: flex;
+    gap: 10px;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #912933;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    
+}
+
+button {
+    background-color: #912933;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #751e28;
+}
+
+/* General services container styling */
 .services-container {
     display: flex;
     justify-content: center;
@@ -12,6 +120,7 @@
     text-align: center;
 }
 
+/* Individual service item styling */
 .service-item {
     display: flex;
     flex-direction: column;
@@ -21,6 +130,7 @@
     padding: 10px;
 }
 
+/* Service item image styling */
 .service-item img {
     width: 200px;
     height: 200px;
@@ -30,12 +140,315 @@
     transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
 }
 
+/* Hover effect for service images */
 .service-item img:hover {
     filter: brightness(80%);
     transform: translateY(-10px);
 }
 
+
+
+/* Container for each project */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+/* Image section */
+.about-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 5/4;
+    object-fit: cover;
+    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.about-image img:hover {
+    /*filter: brightness(80%);*/
+    transform: translateY(-10px);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.updates-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.update-item {
+    width: 350px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.update-item:hover {
+    /*filter: brightness(80%);*/
+    transform: translateY(-10px);
+}
+
+/* Profile Section */
+.update-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.location {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Post Image */
+.update-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+.update-content {
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.update-content p {
+    margin: 0;
+    line-height: 1.4;
+    flex-grow: 1; 
+    font-size: 1rem;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-top: auto; 
+}
+
+#google-map {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    gap:20px;
+    padding: 50px;
+}
+
+.map-bg {
+    width: 90vw;
+    height: 50vh; /* Adjust as needed */
+    position: relative;
+}
+
+.map-bg iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonial-item {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Profile Section */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.testimonial-rating {
+    color: gold;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.faq-container {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    gap: 5px;
+    padding-top: 10px;
+}
+.faq-item {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+    width: 100%;
+    background: #912933; /* Red background */
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-family: 'InstrumentSans';
+}
+
+.faq-question:hover {
+    background: #af4550; 
+}
+
+.faq-answer {
+    background: white;
+    padding: 0 15px;
+    
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease-out, padding 0.3s ease-out;
+    border-radius: 0 0 5px 5px;
+}
+
+/* When active, show the answer with full height */
+.faq-item.active {
+    flex-grow: 1;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px; /* Adjust height based on content */
+    opacity: 1;
+    padding: 10px 15px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when expanded */
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 768px) {
+    .appointment-form {
+        width: 80vw; /* Make the form wider for better usability */
+        padding: 8px;
+    }
+    
+    .appointment-form.expanded {
+        width: 90vw; /* Expanded form takes more space */
+    }
+
+    .form-fl, .form-sl {
+        flex-direction: column; /* Stack form elements vertically */
+    }
+
+    #toggle-form-btn {
+        width: 30vw;
+    }
+
+    #close-form-btn {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
     .services-container {
         gap: 30px;
         padding: 25px 0;
@@ -45,17 +458,80 @@
         width: 175px;
         height: 175px;
     }
-}
 
-@media (max-width: 480px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    /* Ensure form expands correctly on small screens */
+    #full-form {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
+    .appointment-form.expanded #full-form {
+        max-height: 1000px; /* Large enough to fit content */
+        opacity: 1;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+    /* Appointment form adjustments for mobile */
+    .appointment-form {
+        width: 95vw;
+        padding: 5px;
+    }
+
+    .appointment-form.expanded {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    select, input, button {
+        font-size: 0.8rem;
+        padding: 4px;
+    }
+
+    #close-form-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    /* Adjust the size of service images on mobile */
     .service-item img {
         width: 150px;
         height: 150px;
+    }
+
+    /* Text and container adjustments for mobile */
+    .about-text {
+        max-width: 80%;
+    }
+
+    .about-image {
+        min-width: 250px;
+        max-width: 500px;
+    }
+
+    .faq-container {
+        width: 80%;
+    }
+
+    /* Style for the toggle button in mobile */
+    #toggle-form-btn {
+        font-size: 1rem;
+        background-color: #fcecdf;
+        color: #912933;
+        width: 50vw;
+    }
+
+    /* Ensure the form expands properly on mobile */
+    .appointment-form.expanded #full-form {
+        max-height: 1400px;  /* Increased max-height for mobile */
     }
 }
