@@ -310,7 +310,24 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: left;
+    height: inherit; 
 }
+
+.testimonial-content {
+    font-size: 14px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.testimonial-rating {
+    color: gold;
+    font-size: 18px;
+    margin-top: auto;
+}
+
 
 .testimonial-header {
     display: flex;
